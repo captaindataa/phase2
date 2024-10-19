@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Selectors Example</title>
+  <style>
+    /* Universal selector */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* Type selector */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #b7c4ab;
+      padding: 20px;
+    }
+
+    /* ID selector */
+    #header {
+      background-color: #4CAF50;
+      color: white;
+      padding: 10px;
+      text-align: center;
+    }
+
+    /* Class selector */
+    .intro {
+      font-size: 20px;
+      color: #333;
+      margin: 20px 0;
+    }
+
+    /* Descendant selector */
+    div p {
+      color: #555;
+    }
+
+    /* Child selector */
+    ul > li {
+      color: #000;
+      list-style-type: square;
+    }
+
+    /* Adjacent sibling selector */
+    h1 + p {
+      color: blue;
+      font-weight: bold;
+    }
+
+    /* General sibling selector */
+    h2 ~ p {
+      color: darkgreen;
+    }
+
+    /* Attribute selector */
+    input[type="text"] {
+      border: 2px solid #4CAF50;
+      padding: 5px;
+    }
+
+    /* Pseudo-class selector */
+    a:hover {
+      color: orange;
+    }
+
+    /* Pseudo-element selector */
+    p::first-letter {
+      font-size: 2em;
+      color: red;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="header">
+    <h1>Welcome to CSS Selectors Demo</h1>
+  </div>
+
+  <p class="intro">This is an introduction paragraph styled with a class selector.</p>
+
+  <h1>Main Heading</h1>
+  <p>This paragraph comes immediately after the h1 tag and is styled with an adjacent sibling selector.</p>
+
+  <h2>Subheading</h2>
+  <p>All paragraphs after this h2 heading are styled using a general sibling selector.</p>
+  <p>This is another paragraph affected by the general sibling selector.</p>
+
+  <div>
+    <p>This paragraph is inside a div and styled using a descendant selector.</p>
+  </div>
+
+  <ul>
+    <li>This list item is styled with a child selector.</li>
+    <li>Another list item.</li>
+  </ul>
+
+  <input type="text" placeholder="Text input styled with attribute selector">
+
+  <p>Hover over this <a href="#">link</a> to see the pseudo-class selector in action.</p>
+
+</body>
+</html>
